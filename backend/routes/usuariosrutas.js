@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const usuarioscontroller = require("../modelo/usuariosmodelo.js");
+const usuariosmodel = require("../modelo/usuariosmodelo.js");
 
-router.get("/",usuarioscontroller.consultarDetalle);
-router.post("/",usuarioscontroller.ingresar);
+router.get("/",usuariosmodel.consultarDetalle);
+router.post("/",usuariosmodel.ingresar);
 
 /* Ejemplo con parámetros */
 
 router.route("/:iden")
-.get(usuarioscontroller.consultarDetalle);
+.get(usuariosmodel.consultarDetalle);
 /*
 .put(usuarioscontroller.actualizar)
 .delete(usuarioscontroller.borrar);
